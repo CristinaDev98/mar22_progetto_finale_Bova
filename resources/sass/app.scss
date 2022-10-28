@@ -1,0 +1,206 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+nav.navbar{
+  background-color: #8BC6EC;
+  background-image: linear-gradient(303deg, #8BC6EC 0%, #9599E2 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.search {
+    --background: #ffffff;
+    --text-color: #414856;
+    --primary-color: #4F29F0;
+    --border-radius: 10px;
+    --width: 190px;    
+    --height: 55px;      
+    background: var(--background);
+    width: auto;
+    height: var(--height);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(#414856, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input[type="text"] {
+      position: relative;
+      width: var(--height);
+      height: var(--height);
+      font: 400 16px 'Varela Round', sans-serif;
+      color: var(--text-color);
+      border: 0;
+      box-sizing: border-box;
+      outline: none;
+      padding: 0 0 0 40px;
+      transition: width .6s ease;
+      z-index: 10;
+      opacity: 0;
+      cursor: pointer;
+      &:focus {
+        z-index: 0;
+        opacity: 1;
+        width: var(--width);
+        ~ .symbol {
+          &::before {
+            width: 0%;
+          }
+          &:after {
+            clip-path: inset(0% 0% 0% 100%);
+            transition: clip-path .04s linear .105s;
+          }
+          .cloud {
+            top: -30px;
+            left: -30px;
+            transform: translate(0, 0);
+            transition: all .6s ease;
+          }
+          .lens {
+            top: 20px;
+            left: 15px;
+            transform: translate(0, 0);
+            fill: var(--primary-color);
+            transition: top .5s ease .1s, left .5s ease .1s, fill .3s ease;
+          }
+        }
+      }
+    }
+    .symbol {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content:"";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        z-index: -1;
+        transition: width .6s ease;
+      }
+      &:after {
+        content:"";
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        z-index: 1;
+        clip-path: inset(0% 0% 0% 0%);
+        transition: clip-path .04s linear .225s;
+      }
+      .cloud,
+      .lens {
+        position: absolute;
+        fill: #fff;
+        stroke: none;
+        top: 50%;
+        left: 50%;
+      }
+      .cloud {
+        width: 35px;
+        height: 32px;
+        transform: translate(-50%, -60%);
+        transition: all .6s ease;
+      }
+      .lens {
+        fill: #fff;
+        width: 16px;
+        height: 16px;
+        z-index: 2;
+        top: 24px;
+        left: 24px;
+        transition: top .3s ease, left .3s ease, fill .2s ease .2s;
+      }
+    }
+  }
+
+.container .title{
+  margin-top: 6.5em;
+}
+
+.carousel .carousel-inner img {
+    width: 100%; 
+    height: 40em; 
+    object-fit: cover;
+    overflow: hidden; 
+    border-radius: 10px;
+    margin-top: 2em;
+} 
+
+.title, .subtitle {
+    margin-top: 2em;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.subtitle2 {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 4em;
+}
+
+.subtitle3 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.supported {
+    margin: 3em;
+    text-align: center;
+}
+
+picture img{
+    margin: 2em;
+    margin-top: 1em;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer{
+    margin-left: 2em;
+}
+
+.footer p {
+    text-align: left;
+    margin-top: .5em;
+    color: rgb(138, 137, 137);
+}
+
+.contact{
+    margin-top: 1.5em;
+}
+
+.contact-link a:hover {
+    text-decoration: underline;
+    color: rgb(110, 110, 110);
+} 
+.contact-link{
+    margin-top: .5em;
+}
+.contact-link a {
+    margin-top: 1em;
+    text-decoration: none;
+    color: rgb(138, 137, 137);
+}
