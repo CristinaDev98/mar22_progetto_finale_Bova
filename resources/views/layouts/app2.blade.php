@@ -72,7 +72,7 @@
                     <img src="{{ asset('image/heart.png') }}" alt="" width="4%"> 
                     <a href="#"><img src="{{ asset('image/shopping-cart.png') }}" alt="" width="3%"></a>
                 </div>
-                {{-- <div class="search" style="margin-right: 4em;">
+                <div class="search" style="margin-right: 4em;">
                 <input type="text" placeholder="search" />
                 <div class="symbol">
                   <svg class="cloud">
@@ -99,13 +99,83 @@
                   C4.622,10.623,2.833,8.831,2.845,6.631L2.845,6.631z" />
                 </symbol>
               </svg>
-            </div> --}}
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="container">
+            <footer>
+                @yield('footer')
+                <div class="supported">
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://www.nftsensei.xyz">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (2).webp') }}" alt="" width="15%">
+                    </picture>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://www.tokun.app">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (3).webp') }}" alt="" width="15%">
+                    </picture>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://uniswap.org">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (4).webp') }}" alt="" width="15%">
+                    </picture>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://nftgo.io">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (5).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://gopluslabs.io">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (6).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://www.traitsniper.com">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (7).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://raritysniper.com">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (8).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://opensea.io">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (9).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://nfttrack.ai/en-us">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (10).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                    <a class="mx-auto block h-[40px] w-[100px] hover:underline" target="_black" href="https://www.nftscan.com">
+                    <picture>
+                        <img src="{{ asset('img_supp/1440 (1).webp') }}" alt="" width="15%">
+                    </picture>
+                    </a>
+                </div>
+                    <div class="footer">
+                        <img src="{{ asset('image/art.png') }}" class="footer-logo" alt="" width="3%">
+                        <span class="title-logo">BlockSpace</span><br>
+                        <p>100% revenue shared with X2Y2 token stakers.</p>
+                        <div class="contact">
+                            <img src="{{ asset('img_footer/twitter.png') }}" class="footer-contact" alt="" width="3%">
+                            <img src="{{ asset('img_footer/discord.png') }}" class="footer-contact" alt="" width="3%">
+                            <img src="{{ asset('img_footer/instagram.png') }}" class="footer-contact" alt="" width="3%">
+                        </div>
+                        <div class="contact-link">
+                            <a href="#">Contact Us</a>
+                            <a href="#">Docs</a>
+                            <a href="#">Audit Report</a>
+                            <a href="#">Brand</a>
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
+                        </div>
+                    </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

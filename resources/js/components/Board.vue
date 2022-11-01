@@ -3,18 +3,20 @@ import axios from 'axios';
 
     export default {
         data() {
-             return { nfts: []} 
+             return { nfts: [], name: "", floor_price: "", image: ""} 
             },
         mounted() {
-             this.getNfts() 
+             this.getNfts()
             },
         methods: {
         deleteNft(e) {
-             this.nfts = this.nfts.filter( o => o.id !== e); 
+             this.nfts = this.nfts.filter( o => o.id !== e);
+              console.log('ciao')
             },
         getNfts() {
             axios.get('/api/nfts').then((response) => {
-            this.nfts = response.data;
+                //console.log(response)
+            this.nfts = response;
             })
         }
         }
@@ -23,15 +25,16 @@ import axios from 'axios';
 
 <template>
     <div>
-        <create-nft @create-nft="getNfts"></create-nft>
-        <nft
-        v-for="nft in nfts"
-        :key="nft.id"
-        :name="nft.name"
-        :floorPrice="nft.floor_price"
-        :image="nft.image"
-        :nft="nft.id"
-        @delete-nft="deleteNft"
-        ></nft>
+        <create-nft @create-nft="getNfts"></create-nft><br><br>
+        <div class="container-card">
+            <nft v-for="nft in nfts"
+            :key="nft.id"
+            :name="nft.name"
+            :floorPrice="nft.floor_price"
+            :image="nft.image"
+            :id="nft.id"
+            @delete-nft="deleteNft"
+            ></nft>
+        </div>
     </div>
 </template>

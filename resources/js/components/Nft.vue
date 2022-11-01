@@ -6,25 +6,33 @@ import axios from 'axios';
             name: String,
             floorPrice: String,
             image: String,
-            nft: Number 
+            id: Number 
         },
         methods: {
         destroy() {
-            axios.delete('api/nfts/' + this.nft)
-            .then((response) => { this.$emit('delete-nft', this.nft) })
+            axios.delete('api/nfts/' + this.id)
+            .then((response) => { this.$emit('delete-nft', this.id) })
             }
         }
     }
 </script>
 
 <template>
-    <div class="card" v-for="nft in nfts">
-    <div class="card-header">{{ nft.name }}</div>
-    <div class="card-body">
-    <img :src=nft.image class="card-img-top img-fluid img-thumbnail w-50 h-50">   
-    <p class="card-text">Price: {{ nft.floor_price }} ETH</p>
-    <button class="btn float-end" @click="destroy">Delete</button>
-    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-5">
+                <div class="card text-center border border-white grey-border position-relative">
+                <div class="card-nft">
+                    <img :src="image" class="card-img-top img-fluid img-thumbnail w-50 h-50">
+                    <div class="card-body">
+                        <div>{{ name }}</div>   
+                        <p class="card-text">Price: {{ floorPrice }} ETH</p>
+                        <button class="btn btn-danger float-end" @click="destroy">X</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </template>
     

@@ -8,10 +8,6 @@ use Illuminate\Http\Request;
 class NftController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -41,9 +37,18 @@ class NftController extends Controller
     public function store(Request $request)
     {
         $nft = new Nft();
+        $request->validate([
+            'name' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'floor_price' => 'required',
+        ]);
+        if ($request->image) {
+            $name = uniqid() . '.' . $request->image->extension();
+            $request->image->move(public_path('image/img_nft'), $name);
+            $nft->image = $name;
+        }
         $nft->name = $request->name;
         $nft->floor_price = $request->floor_price;
-        $nft->image = $request->image;
         $nft->save();
         return ['alert' => 'Nft created successfully.'];
 
@@ -80,7 +85,21 @@ class NftController extends Controller
      */
     public function update(Request $request, Nft $nft)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'floor_price' => 'required',
+        ]);
+        if ($request->image) {
+            $name = uniqid() . '.' . $request->image->extension();
+            $request->image->move(public_path('image/img_nft'), $name);
+            $nft->image = $name;
+        }
+        $nft->name = $request->name;
+        $nft->floor_price = $request->floor_price;
+        $nft->save();
+        return ['alert' => 'Nft updated successfully.'];
+
     }
 
     /**
