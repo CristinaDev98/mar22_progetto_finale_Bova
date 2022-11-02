@@ -22,13 +22,13 @@ import axios from 'axios';
 </script>
 
 <template>
-    <div>
-        <label for="name" class="p-0 mt-2">Name</label>
-        <input type="text" id="name" v-model="name"><br>
-        <label for="floor_price" class="p-0 mt-2">Floor Price</label>
-        <input type="number" v-model="floor_price" id="floor_price"><br>
-        <label for="image" class="mt-3">Image</label><br>
-        <input type="file" id="image" name="image">
+    <div class="container-form">
+        <label for="name" class="p-0 mt-2 label-form">Name:</label>
+        <input type="text" class="input-form" id="name" v-model="name"><br>
+        <label for="floor_price" class="p-0 mt-2 label-form">Floor Price:</label>
+        <input type="number" class="input-form" v-model="floor_price" id="floor_price"><br>
+        <label for="image" class="mt-3">Image:</label>
+        <input type="file" class="input-form" id="image" name="image">
         <button class="btn btn-primary float-end" @click="createNft">Create</button>
     </div>
 </template>

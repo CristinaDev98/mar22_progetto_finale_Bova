@@ -135,8 +135,33 @@ nav.navbar{
     }
   }
 
+.container-create{
+  margin-top: 7em;
+}
+
+.container-form{
+  text-align: left;
+}
+
+.input-form{
+  margin-left: .5em;
+  display: list-item;
+  border-radius: 10px;
+  border-color: white;
+}
+
 .col-md-8{
   margin-top: 4em;
+}
+
+
+.nftcard{
+  width: 20vw;
+}
+
+.container-card {
+ display: flex;
+ flex-direction: row;
 }
 
 .container .title{

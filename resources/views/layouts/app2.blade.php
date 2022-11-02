@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'BlockSpace') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,6 +56,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('nfts.create') }}">
+                                        {{ __('Create') }}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -159,7 +161,7 @@
                     <div class="footer">
                         <img src="{{ asset('image/art.png') }}" class="footer-logo" alt="" width="3%">
                         <span class="title-logo">BlockSpace</span><br>
-                        <p>100% revenue shared with X2Y2 token stakers.</p>
+                        <p>100% revenue shared with BlockSpace token stakers.</p>
                         <div class="contact">
                             <img src="{{ asset('img_footer/twitter.png') }}" class="footer-contact" alt="" width="3%">
                             <img src="{{ asset('img_footer/discord.png') }}" class="footer-contact" alt="" width="3%">

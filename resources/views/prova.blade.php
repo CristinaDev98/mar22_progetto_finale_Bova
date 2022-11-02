@@ -31,13 +31,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<div class="subtitle">
-    <h2>Hot Collection</h2>
-</div>
 
-<div class="container">
-<board></board>
-</div>
 
 <div class="subtitle2">
     <h3>Supported By</h3>

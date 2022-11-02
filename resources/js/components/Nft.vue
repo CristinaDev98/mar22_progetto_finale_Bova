@@ -18,9 +18,8 @@ import axios from 'axios';
 </script>
 
 <template>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="mb-5">
+    <div class="row nftcard" style=" padding: 1em;">
+            <div class="mb-4">
                 <div class="card text-center border border-white grey-border position-relative">
                 <div class="card-nft">
                     <img :src="image" class="card-img-top img-fluid img-thumbnail w-50 h-50">
@@ -33,6 +32,5 @@ import axios from 'axios';
             </div>
             </div>
         </div>
-    </div>
 </template>
     

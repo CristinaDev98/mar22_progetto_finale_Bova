@@ -1,10 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <h1 style="text-align: center; margin-top: 2em;"><b>BlockSpace</b></h1><br>
+                <h4 style="text-align: center; margin-bottom: 2em;">Welcome to website NFTS</h4>
             <div class="card">
+                
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">

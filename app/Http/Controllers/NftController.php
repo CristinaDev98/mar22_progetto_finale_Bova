@@ -25,7 +25,7 @@ class NftController extends Controller
      */
     public function create()
     {
-        //
+        return view('nfts.create');
     }
 
     /**
