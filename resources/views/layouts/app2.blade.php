@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('image/art.png')}}" class="img-logo" alt="" width="11%">
+                    <img src="{{ asset('image/art.png')}}" class="img-logo" alt="" style="width: 55px;">
                     <span class="title-logo">BlockSpace</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -159,13 +159,13 @@
                     </a>
                 </div>
                     <div class="footer">
-                        <img src="{{ asset('image/art.png') }}" class="footer-logo" alt="" width="3%">
+                        <img src="{{ asset('image/art.png') }}" class="footer-logo" alt="" style="width: 20px;">
                         <span class="title-logo">BlockSpace</span><br>
                         <p>100% revenue shared with BlockSpace token stakers.</p>
                         <div class="contact">
-                            <img src="{{ asset('img_footer/twitter.png') }}" class="footer-contact" alt="" width="3%">
-                            <img src="{{ asset('img_footer/discord.png') }}" class="footer-contact" alt="" width="3%">
-                            <img src="{{ asset('img_footer/instagram.png') }}" class="footer-contact" alt="" width="3%">
+                            <img src="{{ asset('img_footer/twitter.png') }}" class="footer-contact" alt="" style="width: 20px;">
+                            <img src="{{ asset('img_footer/discord.png') }}" class="footer-contact" alt="" style="width: 20px;">
+                            <img src="{{ asset('img_footer/instagram.png') }}" class="footer-contact" alt="" style="width: 20px;">
                         </div>
                         <div class="contact-link">
                             <a href="#">Contact Us</a>

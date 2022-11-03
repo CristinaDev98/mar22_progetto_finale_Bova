@@ -32,6 +32,64 @@
     </button>
   </div>
 
+  <div class="container-card-home">
+    <h3 style="margin-left: -1em; text-align: center;"><u>The Collection TOP</u></h3>
+    <h5 style="margin: 2em; margin-right: 5em; text-align: center;">The best of the NFTs that had the best market volume</h5>
+<div class="row" style="margin-left: 2.5em;">
+    
+    <div class="col-sm-6 col-lg-4">
+            <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/720.webp') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>Ayori</b></p>
+                </div>
+            </div>
+            </div>
+        
+        <div class="col-sm-6 col-lg-4">
+            <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/Chibi_Valkyrie_800x800.png') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>Chibi Valkirie</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+        <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/unknown.png') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>The Purge</b></p>
+                </div>
+        </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/logo.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>InakaTabi</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/Untitled840_4.jpg') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>Kudomachi</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card-main" style="width: 16rem; margin-bottom: 2em;">
+                <img class="card-img-top" src="{{ asset('image/img_nft/dfgjdj_1.png') }}" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text" style="text-align: center;"><b>Ceasars NFT</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{{ route('nfts.create') }}">
+    <button class="button-29" role="button" type="submit" class="btn">See More</button></a>
+</div>
 
 <div class="subtitle2">
     <h3>Supported By</h3>

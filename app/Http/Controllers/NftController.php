@@ -16,6 +16,7 @@ class NftController extends Controller
     public function index()
     {
         return Nft::all();
+        // return view('nfts.card')->with('nfts', $nfts);
     }
 
     /**
@@ -37,11 +38,7 @@ class NftController extends Controller
     public function store(Request $request)
     {
         $nft = new Nft();
-        $request->validate([
-            'name' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
-            'floor_price' => 'required',
-        ]);
+
         if ($request->image) {
             $name = uniqid() . '.' . $request->image->extension();
             $request->image->move(public_path('image/img_nft'), $name);

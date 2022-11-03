@@ -11,12 +11,12 @@ import axios from 'axios';
         methods: {
         deleteNft(e) {
              this.nfts = this.nfts.filter( o => o.id !== e);
-              console.log('ciao')
+              //console.log('ciao')
             },
         getNfts() {
             axios.get('/api/nfts').then((response) => {
                 //console.log(response)
-            this.nfts = response;
+            this.nfts = response.data;
             })
         }
         }
