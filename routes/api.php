@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('nfts', App\Http\Controllers\NftController::class);
+// Route::apiResource('upload', App\Http\Controllers\NftController::class);

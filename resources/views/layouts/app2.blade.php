@@ -23,16 +23,21 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('image/art.png')}}" class="img-logo" alt="" style="width: 55px;">
                     <span class="title-logo">BlockSpace</span>
+                    
                 </a>
+                
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                <example-component></example-component>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
                     </ul>
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -52,16 +57,27 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }}   
                                 </a>
+                                <div class="float-end">   	
+                                    @foreach (Auth::user()->badges as $badge)
+                                    <span class="badge badge-pill bg-primary" style="margin-right: 10px;"> 
+                                    {{ $badge->name }} 
+                                    </span>
+                                    @endforeach                           
+                                </div>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#"><img src="{{ asset('image/heart.png') }}" alt="" style="width: 20%;"> 
+                                            </a>
+                                        <a class="dropdown-item" href="#"><img src="{{ asset('image/shopping-cart.png') }}" alt="" style="width: 20%"></a>
                                     <a class="dropdown-item" href="{{ route('nfts.create') }}">
                                         {{ __('Create') }}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                        
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -71,8 +87,7 @@
                             </li>
                         @endguest
                     </ul>
-                    <img src="{{ asset('image/heart.png') }}" alt="" width="4%"> 
-                    <a href="#"><img src="{{ asset('image/shopping-cart.png') }}" alt="" width="3%"></a>
+                    
                 </div>
                 <div class="search" style="margin-right: 4em;">
                 <input type="text" placeholder="search" />

@@ -1,10 +1,13 @@
 @extends('layouts.app2')
 
+
 @section('content')
 
 <div class="container">
     <div class="title">
+      
         <h1>Trade NFTs, FREE</h1>
+        
         <h4>100% trading fee rebate for all collections</h4> 
     </div>
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">

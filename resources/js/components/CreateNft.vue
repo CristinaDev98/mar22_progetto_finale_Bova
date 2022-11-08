@@ -25,7 +25,7 @@ import axios from 'axios';
     <div class="row">
     <div class="container-form">
         <div class="container">
-  <div class="row row-cols-3">
+  <div class="row row-cols-2">
     <div class="col">
         <label for="name" class="p-0 mt-2 label-form">Name:</label>
         <input type="text" class="input-form" id="name" v-model="name">
@@ -34,10 +34,10 @@ import axios from 'axios';
         <label for="floor_price" class="p-0 mt-2 label-form">Floor Price:</label>
     <input type="number" class="input-form" v-model="floor_price" id="floor_price">
     </div>
-    <div class="col">
+    <!-- <div class="col">
         <label for="image" class="mt-3">Image:</label>
         <input type="file" id="image" name="image">
-    </div>
+    </div> -->
   </div>
   <button class="button-29 float-end" @click="createNft">Create</button>
 </div>

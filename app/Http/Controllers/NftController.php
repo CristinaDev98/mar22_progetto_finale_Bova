@@ -16,7 +16,6 @@ class NftController extends Controller
     public function index()
     {
         return Nft::all();
-        // return view('nfts.card')->with('nfts', $nfts);
     }
 
     /**
