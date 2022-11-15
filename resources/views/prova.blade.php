@@ -91,8 +91,11 @@
         </div>
     </div>
     <a href="{{ route('nfts.create') }}">
+      <div class="d-flex w-100 justify-content-center">
     <button class="button-29" role="button" type="submit" class="btn">See More</button></a>
+  </div>
 </div>
+
 
 <div class="subtitle2">
     <h3>Supported By</h3>

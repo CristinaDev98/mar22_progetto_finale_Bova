@@ -25,3 +25,7 @@ Route::resource(
     'nfts',
     App\Http\Controllers\NftController::class
 );
+
+// Route::get('/ciao', function () {
+//     return view('ciao');
+// });
